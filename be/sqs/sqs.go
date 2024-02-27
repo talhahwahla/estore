@@ -101,36 +101,3 @@ func (s *SQSService) DeleteMessage(receiptHandle string) error {
 
 	return nil
 }
-
-// func main() {
-// 	// Create a new SQS service instance
-// 	s := NewSQSService("estore")
-
-// 	// Send a message to the queue
-// 	err := s.SendMessage("Hello, SQS!")
-// 	if err != nil {
-// 		fmt.Println("Error sending message:", err)
-// 		return
-// 	}
-// 	fmt.Println("Message sent successfully!")
-
-// 	// Receive messages from the queue
-// 	messages, err := s.ReceiveMessage()
-// 	if err != nil {
-// 		fmt.Println("Error receiving messages:", err)
-// 		return
-// 	}
-
-// 	// Process received messages
-// 	for _, msg := range messages {
-// 		fmt.Println("Received message:", *msg.Body)
-
-// 		// Delete the received message
-// 		err := s.DeleteMessage(*msg.ReceiptHandle)
-// 		if err != nil {
-// 			fmt.Println("Error deleting message:", err)
-// 			return
-// 		}
-// 		fmt.Println("Message deleted successfully!")
-// 	}
-// }
